@@ -1,0 +1,286 @@
+@font-face{
+    font-family: Gotic; 
+    src: url(fonts/gotic.ttf);
+}
+body{
+    background: #ECF0F3;
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+    font-weight: 500;
+    left: 0;
+    margin: 0;
+    position: relative;
+}
+#burger_menu{
+    width: 55px;
+    height: 55px;
+    margin-top: 90px;
+    left: 40px;
+    position: absolute;
+    cursor: pointer;
+}
+.burger_menu_button,.burger_menu_button:after,.burger_menu_button:before{
+    width: 50px;
+    height: 5px;
+    background: #42aaff;
+    position: absolute;
+}
+.burger_menu_button:before{
+    content: '';
+    top: 15px;
+}
+.burger_menu_button:after{
+    content: '';
+    top: -15px;
+}
+#account{
+    width: 85%;
+    height: 100%;
+    left: 11vw;
+    position: absolute;
+}
+.account_title{
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+.account_title_name{
+    color: #42aaff;
+    font-size: 5.9vw;
+    text-align: center;
+    font-family: 'Gotic', sans-serif;
+    font-weight: bold;
+}
+.account_title_date{
+    margin-top: -60px;
+    font-size: 22px;
+    color: #A0AEC4;
+    right: 0;
+    position: absolute;
+    text-align: right;
+}
+.account_avatar img{
+    width: 100%;
+    max-height: 30vh;
+    object-fit: cover;
+    object-position: 50% 50%;
+    border-radius: 40px;
+    border: 5px solid #FFFFFF;
+    box-sizing: border-box;
+    box-shadow: 9px 9px 16px rgba(163, 177, 198, 0.5), -9px -9px 16px rgba(255, 255, 255, 0.5);
+
+}
+.account_firstmoves,.account_secondmoves{margin-top: 70px;}
+.account_firstmoves div,.account_secondmoves div{display: inline-block;}
+.account_firstmoves_friend,.account_firstmoves_msg{
+    width: 47%;
+    height: 200px;
+    background: #ECF0F3;
+    box-shadow: -9px -9px 16px rgba(255, 255, 255, 0.5), 9px 9px 16px rgba(163, 177, 198, 0.5);
+    border-radius: 30px;
+    color: #A0AEC4;
+    font-size: 42px;
+    cursor: pointer;
+}
+.account_firstmoves_friend svg,.account_firstmoves_msg svg{
+    margin-left: 30px;
+    margin-top: 50px;
+}
+.account_firstmoves_friend p,.account_firstmoves_msg p{
+    position: absolute;
+    margin-top: -80px;
+    margin-left: 150px;
+    font-weight: 500;
+}
+.account_secondmoves_wall,.account_secondmoves_photos,.account_secondmoves_friends,.account_secondmoves_audios{
+    height: 18.5vw;
+    width: 18.5vw;
+    background: #ECF0F3;
+    box-shadow: -9px -9px 16px rgba(255, 255, 255, 0.5), 9px 9px 16px rgba(163, 177, 198, 0.5);
+    border-radius: 20px;
+    transition: 0.2s;
+    cursor: pointer;
+}
+.account_secondmoves_photos,.account_secondmoves_friends,.account_secondmoves_audios{margin-left: 3.2vw;}
+.account_firstmoves_msg{margin-left: 4.5vw;}
+.account_secondmoves_wall:active,.account_secondmoves_photos:active,.account_secondmoves_friends:active,.account_secondmoves_audios:active,.account_firstmoves_friend:active,.account_firstmoves_msg:active{
+    background: #ECF0F3;
+    box-shadow: inset -5px -5px 10px #FAFBFF, inset 5px 5px 10px #A6ABBD;
+}
+.account_secondmoves_wall svg,.account_secondmoves_photos svg,.account_secondmoves_friends svg,.account_secondmoves_audios svg{
+    margin-left: 20px;
+    margin-top: 20px;
+}
+.account_secondmoves_wall p,.account_secondmoves_photos p,.account_secondmoves_friends p,.account_secondmoves_audios p{
+    font-size: 42px;
+    position: absolute;
+    color: #A0AEC4;
+    margin-top: 50px;
+    margin-left: 20px;
+}
+.account_show{
+    min-height: 200px;
+    margin-top: 80px;
+}
+.account_show_wall_post{
+    width: 100%;
+    min-height: 250px;
+    background: #ECF0F3;
+    box-shadow: 9px 9px 16px rgba(163, 177, 198, 0.5), -9px -9px 16px rgba(255, 255, 255, 0.5);
+    border-radius: 30px;
+    margin-bottom: 30px;
+}
+.account_show_wall_post_avatar{
+    position: absolute;
+    margin-top: 120px;
+    margin-left: 30px;
+}
+.account_show_wall_post_avatar img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+}
+.account_show_wall_post_title{
+    position: absolute;
+    margin-left: 30px;
+    margin-top: 10px;
+    width: 100%;
+}
+.account_show_wall_post_title p:first-child{
+    font-size: 46px;
+    color: #42aaff;
+}
+.account_show_wall_post_title p:nth-child(2){
+    position: absolute;
+    font-size: 26px;
+    color: #D7D7D7;
+    margin-top: -40px;
+    margin-left: 56%;
+}
+.account_show_wall_post_text{
+    position: relative;
+    color: #A0AEC4;
+    font-size: 42px;
+    margin-left: 260px;
+    padding-top: 100px;
+    padding-bottom: 50px;
+    padding-right: 20px;
+}
+#information{
+    bottom: 0;
+    position: fixed;
+    height: 150px;
+    width: 100%;
+    border-radius: 50px 50px 0 0;
+    transition: 0.4s;
+    z-index: 100;
+    background: #ECF0F3;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), -9px -9px 16px rgba(255, 255, 255, 0.5);
+}
+.information_clickbutton{
+    width: 100%;
+    height: 100px;
+    margin-top: 0px;
+    position: absolute;
+}
+.information_stripe{
+    width: 350px;
+    height: 10px;
+    background: #A0AEC4;
+    border-radius: 10px;
+    margin: 40px auto;
+}
+#information.active{
+    height: 75%;
+    overflow-y: auto;
+}
+.information_all{
+    margin-top: 90px;
+    color: #A0AEC4;
+    display: none;
+}
+#information.active .information_all{
+    display: block;
+}
+#blur{
+    background: #000;
+    opacity: 0.4;
+    z-index: 90;
+    width: 500vw;
+    height: 500vh;
+    position: absolute;
+    cursor: pointer;
+}
+.all_title{
+    color: #42aaff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 48px;
+    text-align: center;
+}
+.all_status{
+    width: 96%;
+    height: 120px;
+    margin: 30px 2%;
+    border-top: 2px solid;
+    border-bottom: 2px solid;
+    border-color: #A0AEC4;
+}
+.all_status p{
+    position: absolute;
+    margin-top: -42px;
+    font-size: 36px;
+    margin-left: 80px;
+}
+.all_status svg{margin-top: 40px;}
+.all_exp{
+    background: #3c9dec;
+    width: 96%;
+    height: 70px;
+    margin: 0 2%;
+    font-size: 24px;
+    color: #fff;
+    margin-top: 40px;
+    border-radius: 10px;
+    text-align: center;
+    line-height: 70px;
+}
+.all_info{
+    width: 96%;
+    height: auto;
+    margin: 40px 2%;
+}
+.all_info_birth p,.all_info_city p,.all_info_edu p,.all_info_site p,.all_info_about p{
+    position: absolute;
+    margin-top: -35px;
+    margin-left: 90px;
+    font-size: 24px;
+}
+.all_info_city svg,.all_info_edu svg,.all_info_site svg,.all_info_about svg{
+    margin-top: 30px;
+    margin-left: 5px;
+}
+#slide{
+    background: #ECF0F3;
+    position: fixed;
+    width: 45vw;
+    height: 100%;
+    z-index: 91;
+    left: -45vw;
+    transition: 0.4s;
+}
+#slide.active{left: 0;}
+.slide_moves{margin-top: 100px;}
+.slide_moves div{
+    font-size: 3.3vw;
+    color: #A0AEC4;
+    margin-top: 50px;
+    padding: 50px;
+}
+.slide_moves div:active{background: #D6D8DA;}
+.slide_moves div svg{width: 7vw;}
+.slide_moves div p{
+    position: absolute;
+    margin-top: -4vw;
+    margin-left: 10vw;
+}
